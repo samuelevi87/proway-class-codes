@@ -20,6 +20,24 @@ public class Class20210412 {
 			System.out.println("Valor diferente do esperado");
 		}
 
+		char[][] ab = new char[5][5];
+		for (int i = 0; i < ab.length; i++) {
+			char[] linha = new char[5];
+			for (int j = 0; j < linha.length; j++) {
+				if (j == 2 && i == 2) break;
+				if (j == 2 && i == 2) continue;
+				linha[j] = 's';
+			}
+			ab[i] = linha;
+		}
+		for(char[] printLinha : ab) {
+			for (char ch:printLinha) {
+				System.out.println(ch);
+				System.out.println(" ");
+			}
+			System.out.println("\n");
+		}
+
 	}
 
 }
